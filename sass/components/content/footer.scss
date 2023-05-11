@@ -1,0 +1,190 @@
+.site-footer {
+    background: linear-gradient(-45deg,
+            #ccd1ef 0%,
+            #f5f6f7 13%,
+            #fdfcff 25%,
+            #0991a1 38%,
+            #edf9fb 50%,
+            #34b900 62%,
+            #71ebf1 75%,
+            white 100%);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-header {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 62px;
+        text-align: center;
+        text-shadow: 0 0 10px #e1eaed, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+            0 0 80px #dbe3e6, 0 0 120px #00b3ff;
+        font-family: "Montserrat";
+
+        .footer-logo {
+            width: 250px;
+            margin: -15px 0px 0px 15px;
+        }
+    }
+
+    .all-logos {
+        align-items: center;
+    }
+
+    .footer-right-logo {
+        width: 175px;
+    }
+
+    ul {
+        color: white;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0px !important;
+        padding: 0px !important;
+        display: flex;
+        justify-content: Center;
+        align-items: center;
+        align-content: center;
+    }
+
+    ul li {
+        list-style: none;
+        margin: 0 40px;
+
+        @media all and (max-width: 678px) {
+            margin: 0% 10% 0% 20%;
+        }
+    }
+
+    ul li a .fab {
+        font-size: 40px;
+        color: rgb(19, 23, 23) !important;
+        line-height: 80px;
+        transition: 0.5s;
+
+        @media all and (max-width: 678px) {
+            margin: -15px;
+        }
+    }
+
+    ul li a {
+        position: relative;
+        display: block;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+        transition: 0.5s;
+        box-shadow: -30px 30px 10px rgba(0, 0, 0, 0.5);
+
+        @media all and (max-width: 678px) {
+            width: 55px;
+            height: 55px;
+        }
+    }
+
+    ul li a::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        height: 100%;
+        width: 20px;
+        background-color: #0c1416;
+        transition: 0.5s;
+        transform: rotate(0deg) skewY(-45deg);
+    }
+
+    ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: -10px;
+        height: 20px;
+        width: 100%;
+        background-color: var(--grey);
+        transition: 0.5s;
+        transform: rotate(0deg) skewX(-45deg);
+    }
+
+    ul li a:hover {
+        transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+        box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    ul li:hover .fab {
+        color: var(--white);
+    }
+
+    ul li:hover:nth-child(1) a {
+        background: var(--facebook);
+    }
+
+    ul li:hover:nth-child(1) a::before {
+        background: #dcdee3;
+    }
+
+    ul li:hover:nth-child(1) a::after {
+        background: #b6bac0;
+    }
+
+    ul li:hover:nth-child(2) a {
+        background: var(--instagram);
+    }
+
+    ul li:hover:nth-child(2) a::before {
+        background: #dcdee3;
+    }
+
+    ul li:hover:nth-child(2) a::after {
+        background: #aceebd;
+    }
+
+    ul li:hover:nth-child(3) a {
+        background: var(--twitter);
+    }
+
+    ul li:hover:nth-child(3) a::before {
+        background: #64b2ee;
+    }
+
+    ul li:hover:nth-child(3) a::after {
+        background: #73baf0;
+    }
+
+    ul li:hover:nth-child(4) a {
+        background: var(--apple);
+    }
+
+    ul li:hover:nth-child(4) a::before {
+        background: #171717;
+    }
+
+    ul li:hover:nth-child(4) a::after {
+        background: #2e2e2e;
+    }
+}
+
+@media all and (max-width: 678px) {
+    .footer-header {
+        font-size: 32px !important;
+
+        .footer-logo {
+            width: 125px !important;
+        }
+    }
+
+    a {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .fab {
+        font-size: 18px;
+    }
+}

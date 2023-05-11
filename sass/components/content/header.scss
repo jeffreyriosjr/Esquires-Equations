@@ -1,0 +1,186 @@
+.main-header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 125px;
+    padding: 0;
+    background: linear-gradient(-45deg,
+            #a0aae1 0%,
+            #addf70 13%,
+            #d0ced3 25%,
+            #cded18 38%,
+            #11ceef 50%,
+            #b7ec72 62%,
+            #7ed4e8 75%,
+            #7bf369 87%,
+            #78e0f7 100%);
+    background-size: 250% 250%;
+    animation: gradient 15s ease infinite;
+
+    .smyle-logo {
+        .blk-wht-logo {
+            width: 175px;
+            margin-left: 15px;
+        }
+    }
+
+    .logo-headers,
+    .the-a-tag {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px 0px 30px;
+        text-shadow: 0 0 10px #212222, 0 0 20px #00b3ff, 0 0 40px #cbd8d8,
+            0 0 80px #f7fdff, 0 0 120px #242424;
+        color: white;
+        text-decoration: none;
+        background-size: 400%;
+        animation: text-gradient 5s ease infinite;
+        padding: 5px 0;
+
+        @keyframes text-gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    }
+
+    @media all and (max-width: 320px) {
+        font-size: 18px;
+    }
+
+    .header-logo-one {
+        margin: 0px 0px 0px 25px;
+        font-size: 44px;
+        width: fit-content;
+
+        @media all and (max-width: 768px) {
+            font-size: 32px;
+        }
+    }
+
+    .header-logo-two {
+        margin: -10px -25px;
+        font-size: 18px;
+        width: max-content;
+
+        @media all and (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    li {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 600;
+        text-shadow: 0 0 10px #212222, 0 0 20px #00b3ff, 0 0 40px #cbd8d8,
+            0 0 80px #f7fdff, 0 0 120px #242424;
+        color: white;
+
+        @media all and (max-width: 1084px) {
+            font-size: 14px;
+        }
+
+        @media all and (max-width: 768px) {
+            font-size: 14px;
+            margin: 2px;
+        }
+    }
+
+    .smyle-navbar {
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+
+        .menu-items {
+            margin: 20px 10px;
+            animation: animate 5s linear infinite;
+            font-size: 14px;
+            border: 1px;
+            border-style: groove;
+            border-radius: 10%;
+            font-family: 'Montserrat';
+        }
+
+        .toggle-logo {
+            width: 25px;
+            text-align: center;
+            filter: invert(46%) sepia(99%) saturate(2071%) hue-rotate(162deg) brightness(95%) contrast(102%);
+        }
+
+        .menu-items.toggled ul {
+            display: flex;
+        }
+
+        ul {
+            margin: 25px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+
+            @media screen and (max-width: 425px) {
+                margin: 0px;
+            }
+        }
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+@keyframes animate {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #c7dfe6;
+        text-shadow: none;
+    }
+
+    18.1%,
+    20.1%,
+    20%,
+    50%,
+    60.1%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4, 0 0 20px #03b3f4, 0 0 40px #03bcf4,
+            0 0 80px #03b3f4, 0 0 160px #03bcf4;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-navigation.toggled ul {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column-reverse;
+    }
+}
